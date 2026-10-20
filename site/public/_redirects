@@ -1,0 +1,9 @@
+# The site opens straight on Satya (no separate landing page).
+/                /satya/  302
+
+# Client-side routes of each demo's single-page app → that app's index page (a 200 rewrite; the target is the directory, since a rewrite to …/index.html is answered with a 308 to …/).
+# Listed explicitly so real static files (assets, gallery JSON) are never shadowed.
+/satya/run/*     /satya/  200
+/satya/archive   /satya/  200
+/satya/benchmarks /satya/ 200
+/satya/about     /satya/  200

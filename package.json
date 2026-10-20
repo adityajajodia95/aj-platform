@@ -1,0 +1,30 @@
+{
+  "name": "aj-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Shared live-demo platform: aj-gateway Worker (quotas, sessions, cache, model router, status, cron) and the aj-demos Pages site.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "gateway",
+    "site"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.4.1",
+    "@eslint/js": "^10.0.0",
+    "eslint": "^10.12.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "~4.1.11",
+    "wrangler": "^4.150.0"
+  }
+}

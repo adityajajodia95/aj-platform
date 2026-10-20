@@ -1,0 +1,13 @@
+// Pages project "aj-demos": static demos + /api router. Service bindings exist only for deployed Workers
+// (C1: Satya); any other project path answers 503 not_deployed.
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "aj-demos",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "services": [
+    { "binding": "GATEWAY", "service": "aj-gateway" },
+    { "binding": "SATYA", "service": "satya-api" },
+  ],
+}

@@ -1,0 +1,8 @@
+{
+  "text": {
+    "workersai": "@cf/openai/gpt-oss-120b",
+    "groq": "openai/gpt-oss-120b"
+  },
+  "embed": { "workersai": "@cf/baai/bge-m3" },
+  "rerank": { "workersai": "@cf/baai/bge-reranker-base" }
+}

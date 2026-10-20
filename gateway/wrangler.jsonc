@@ -1,0 +1,20 @@
+// aj-gateway: shared quotas, sessions, cache, model router, HF Space proxy, status and cron.
+// Secrets (never here): ADMIN_TOKEN, GROQ_API_KEY, HF_TOKEN, TURNSTILE_SECRET, SESSION_KEY — `wrangler secret put`.
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "aj-gateway",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": { "binding": "AI" },
+  "durable_objects": { "bindings": [{ "name": "LEDGER", "class_name": "LedgerDO" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["LedgerDO"] }],
+  "triggers": { "crons": ["0 */6 * * *"] },
+  "vars": {
+    // Public Turnstile site key (widget "aj-projects"; not a secret). Tests use Cloudflare's documented test keys.
+    "TURNSTILE_SITEKEY": "0x4AAAAAAFV1QTucPQRxveVD",
+    // Projects with a deployed demo (C1: Satya only for now).
+    "ENABLED_PROJECTS": "satya",
+  },
+  "observability": { "enabled": true },
+}

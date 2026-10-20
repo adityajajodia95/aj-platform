@@ -1,0 +1,5 @@
+{
+  "@cf/openai/gpt-oss-120b": { "in": 31818, "out": 68182 },
+  "@cf/baai/bge-m3": { "in": 1075 },
+  "@cf/baai/bge-reranker-base": { "in": 283 }
+}

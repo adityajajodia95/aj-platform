@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>System status — live demos</title>
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <main>
+      <h1>System status</h1>
+      <p class="lead" id="summary">Loading…</p>
+      <h2>Model providers</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Provider</th>
+            <th scope="col">State</th>
+            <th scope="col">Left today</th>
+          </tr>
+        </thead>
+        <tbody id="providers"></tbody>
+      </table>
+      <h2>Demos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Demo</th>
+            <th scope="col">State</th>
+            <th scope="col">Workers AI neurons left</th>
+            <th scope="col">Groq tokens left</th>
+          </tr>
+        </thead>
+        <tbody id="projects"></tbody>
+      </table>
+      <h2>GPU Spaces</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Space</th>
+            <th scope="col">Stage</th>
+          </tr>
+        </thead>
+        <tbody id="spaces"></tbody>
+      </table>
+      <footer id="footer"><a href="/satya/">Back to Satya</a></footer>
+    </main>
+    <script src="/status/status.js" defer></script>
+  </body>
+</html>

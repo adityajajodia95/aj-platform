@@ -1,0 +1,46 @@
+{
+  "owner": "adityajajodia95",
+  "projects": [
+    {
+      "slug": "satya",
+      "binding": "SATYA",
+      "repo": "satya",
+      "enabled": true,
+      "title": "Satya",
+      "oneLiner": "Multi-agent fact verification: claims, evidence, an advocate–skeptic debate and a cited verdict.",
+      "writeup": "/satya/about"
+    },
+    {
+      "slug": "tarka",
+      "binding": "TARKA",
+      "repo": "tarka",
+      "enabled": false,
+      "title": "Tarka",
+      "oneLiner": "A fine-tuned reasoning model compared side by side with its base model."
+    },
+    {
+      "slug": "examlens",
+      "binding": "EXAMLENS",
+      "repo": "examlens",
+      "enabled": false,
+      "title": "ExamLens",
+      "oneLiner": "Reads handwritten exam answers and grades them against a rubric."
+    },
+    {
+      "slug": "forget-me",
+      "binding": "FORGETME",
+      "repo": "forget-me",
+      "enabled": false,
+      "title": "Forget-Me",
+      "oneLiner": "Private conversational memory that runs in your browser."
+    },
+    {
+      "slug": "kaaran",
+      "binding": "KAARAN",
+      "repo": "kaaran",
+      "enabled": false,
+      "title": "Kaaran",
+      "oneLiner": "Causal discovery with LLM-proposed hypotheses, sandboxed in the browser."
+    }
+  ]
+}

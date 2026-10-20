@@ -1,0 +1,21 @@
+{
+  "workersaiDailyNeurons": 10000,
+  "budgets": { "satya": 4500, "kaaran": 2500, "forgetme": 2000, "embeddings": 500, "reserve": 500 },
+  "groqDailyTokens": 200000,
+  "groqShare": { "satya": 0.5, "kaaran": 0.3, "forgetme": 0.2 },
+  "perIpDaily": {
+    "satya:run": 3,
+    "satya:mcp": 60,
+    "kaaran:run": 2,
+    "forgetme:turn": 30,
+    "forgetme:embed": 300,
+    "tarka:generation": 10,
+    "examlens:answer": 5
+  },
+  "safetyMargin": 0.05,
+  "timeouts": { "llmMs": 60000, "embedMs": 15000, "spaceMs": 120000 },
+  "retries": { "max": 2, "baseMs": 800, "maxMs": 8000 },
+  "breaker": { "failures": 3, "openMs": 300000 },
+  "cacheTtlDays": 30,
+  "evalWindowUtc": ["18:30", "23:50"]
+}
