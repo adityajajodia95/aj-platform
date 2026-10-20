@@ -12,7 +12,7 @@ Source of truth: the private planning documents `docs/Platform_Architecture.md` 
 | M5 Status + cron       | ✅ done                  | 2026-10-13 | `/api/status` (30 s cache, CORS), cron every 6 h                             |
 | M6 Pages site          | ✅ done                  | 2026-10-14 | https://aj-demos.pages.dev (custom domain skipped, C9); `/satya/` deep links |
 | M7 aj-demo-kit         | ✅ done                  | 2026-10-14 | v1.0.0, v1.0.1 (accessible waking overlay); 12 tests                         |
-| M8 CI/CD               | open                     |            | needs the GitHub repos (not created/pushed yet — owner's call)               |
+| M8 CI/CD               | ✅ done                  | 2026-10-20 | repos public; CI green; deploys run once Cloudflare secrets are added        |
 | M9 Website integration | skipped (owner decision) |            |                                                                              |
 | M10 Hardening          | partial                  | 2026-10-14 | secret scan 0 hits; deployed checks in Satya QA_REPORT; chaos tests open     |
 
@@ -41,3 +41,7 @@ Source of truth: the private planning documents `docs/Platform_Architecture.md` 
 | P4  | `wrangler pages project create`        | `… --force`                                                                      | wrangler now steers Pages commands to Workers           |
 | P5  | GitHub owner `adityajajodia`           | `adityajajodia95`                                                                | the owner's actual account                              |
 | P6  | `_redirects` not in spec               | rewrites `/satya/<route>` → `/satya/` (200)                                      | deep links; a rewrite to `…/index.html` answers 308     |
+
+## Publication (2026-10-20)
+
+Public at <https://github.com/adityajajodia95/aj-platform> as a clean copy (the private planning documents in `docs/` are not published; the local history is unchanged). Both workflows ran green on the first push: checks pass, and the deploy steps skip with a notice until `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are added as repository secrets (optional — deploys from the laptop with `wrangler` keep working).
